@@ -1,0 +1,422 @@
+/* style="width: 70px; height: auto; padding-top: 10px" */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-size: 18px;
+
+  font-weight: 400;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+  /* font-size: 20px; */
+  text-decoration: none;
+  /* background-color: #00a2c6;*/
+  color: #eec759;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav {
+  padding: 5px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  /* background-color: #00a2c6; */
+  z-index: 1; /* Tambahkan properti z-index untuk menentukan urutan tumpukan */
+}
+
+nav:hover {
+  background-color: #9bb8cd;
+  color: black;
+}
+
+nav .logo {
+  height: 70px;
+}
+
+header {
+  text-align: center;
+  display: inline;
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url("./img/banner.jpg");
+  background-size: cover; /* Untuk memastikan gambar background menutupi seluruh area .jumbotron */
+  background-position: center; /* Menengahkan background image */
+  height: 700px; /* Atur ketinggian .jumbotron sesuai kebutuhan Anda */
+  color: white; /* Warna teks di atas background image */
+  padding: 20px; /* Padding untuk memberikan ruang di sekitar konten .jumbotron */
+}
+
+.text-jumbotron {
+  padding: 300px;
+}
+
+.kategori img {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kategori img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%); /* Menghapus efek grayscale saat dihover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Menambahkan bayangan saat dihover */
+}
+
+.kategori img:active {
+  transform: scale(1); /* Mengembalikan skala saat gambar ditekan */
+}
+
+#kategori h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+}
+
+.kategori {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative; /* Menjadikan .kategori sebagai referensi untuk posisi absolute */
+}
+
+.featured h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+}
+
+.featured a {
+  text-decoration: none;
+  color: black;
+}
+.featured {
+  display: flex;
+  flex-wrap: wrap; /* Mengizinkan wrapping ke baris baru jika tidak cukup lebar */
+  justify-content: center; /* Menyebar item di antara kolom */
+  gap: 40px;
+}
+
+/* Gaya untuk setiap featured1 */
+.featured1 {
+  flex-basis: calc(50% - 20px); /* Setengah dari lebar container dengan jarak 20px di antara kolom */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Menambahkan transisi untuk efek transform */
+  width: 100%; /* Atur lebar menjadi 100% */
+  max-width: 400px; /* Batasi lebar maksimum */
+}
+
+.featured1:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Memberikan efek scaling saat dihover */
+  color: #9bb8cd;
+}
+
+.featured1 img {
+  width: 100%;
+  height: auto;
+}
+
+.featured1 .card-content {
+  padding: 20px;
+}
+
+.blog-left {
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 40px;
+}
+
+.blog-content img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-content {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Menambahkan transisi untuk efek transform */
+  gap: 30px;
+  margin: 10px;
+}
+
+.blog h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+}
+.card-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* .card-right {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); ada bedanya dengan yang di atas
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 20px;
+} */
+
+.card-right h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+  margin: 5px;
+}
+
+.popular-post {
+  display: flex;
+  width: 400px;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.popular-post img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.popular-post h3 {
+  text-align: center;
+}
+
+main {
+  padding: 50px;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.blog-right {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profil {
+  position: relative;
+}
+
+/* article .me {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 35px;
+} */
+
+.profil img {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  border-radius: 10%;
+}
+
+.profil h1 {
+  position: absolute;
+  bottom: 40%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  background-color: #9bb8cd;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.quotes {
+  background-color: #eec759;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin: 0px 20px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Facebook */
+.fa-linkedin {
+  background: #9bb8cd;
+  color: white;
+  width: 70px;
+}
+
+/* Twitter */
+.fa-instagram {
+  background: #9bb8cd;
+  color: white;
+  width: 70px;
+}
+
+.fa-github {
+  background: #9bb8cd;
+  color: white;
+  width: 70px;
+}
+
+.fa-envelope {
+  background: #9bb8cd;
+  color: white;
+  width: 70px;
+}
+
+.social {
+  text-align: center;
+  padding: 15px;
+}
+
+.social p {
+  text-align: center;
+  font-size: 35px;
+  margin: 10px;
+}
+
+///////////////////code responsif////////////////////////////////
+
+/* Untuk layar dengan lebar maksimum 1200px */
+@media (max-width: 1200px) {
+  header nav ul {
+    padding-inline: 2rem; /* Mengurangi padding untuk menu */
+  }
+
+  .jumbotron .text-jumbotron {
+    padding: 150px; /* Mengurangi padding untuk teks di jumbotron */
+  }
+
+  .kategori img {
+    width: 140px; /* Mengurangi ukuran gambar kategori */
+  }
+
+  .kategori h3 {
+    font-size: 14px; /* Mengurangi ukuran font pada teks kategori */
+  }
+
+  .featured1 {
+    flex-basis: calc(50% - 10px); /* Mengurangi jarak antar featured1 */
+  }
+
+  .blog-left {
+    flex-direction: row; /* Mengubah tata letak menjadi satu kolom */
+  }
+
+  .blog-content img {
+    width: 150px; /* Mengurangi ukuran gambar pada blog content */
+  }
+}
+
+/* Untuk layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* Mengubah menu menjadi satu kolom */
+    gap: 10px; /* Memberikan jarak antar item menu */
+  }
+
+  main {
+    flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+  }
+
+  .blog-right {
+    width: 100%; /* Mengisi lebar container untuk blog-right */
+  }
+
+  .featured {
+    flex-wrap: nowrap; /* Menghindari wrapping item ke baris baru */
+    flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+    justify-content: center; /* Menyusun item di tengah kolom */
+    gap: 20px; /* Mengurangi jarak antar item */
+  }
+  .jumbotron .text-jumbotron {
+    padding: 100px; /* Mengurangi padding untuk teks di jumbotron */
+  }
+
+  .kategori img {
+    width: 100%; /* Mengisi lebar container untuk gambar kategori */
+  }
+
+  .kategori h3 {
+    font-size: 18px; /* Mengembalikan ukuran font pada teks kategori */
+    position: static; /* Menghilangkan posisi absolute pada teks kategori */
+    text-align: center; /* Mengubah tata letak teks kategori menjadi tengah */
+    color: black; /* Mengganti warna teks kategori */
+  }
+
+  .featured1 {
+    flex-basis: 100%; /* Mengisi lebar container untuk featured1 */
+  }
+
+  .blog-content {
+    flex-direction: column; /* Mengubah arah tata letak menjadi satu kolom */
+    gap: 15px; /* Mengurangi jarak antar elemen */
+    padding: 10px;
+    align-items: center;
+  }
+
+  .popular-post {
+    width: 300px;
+    height: auto;
+  }
+}
