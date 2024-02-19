@@ -55,7 +55,7 @@ nav {
 }
 
 nav.scrolled {
-  background-color: #9bb8cd; /* Ganti warna latar belakang saat di-scroll */
+  background-color: #9bb8cd;
   color: black;
 }
 
@@ -100,12 +100,12 @@ nav .logo {
 
 .kategori img:hover {
   transform: scale(1.1);
-  filter: grayscale(0%); /* Menghapus efek grayscale saat dihover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Menambahkan bayangan saat dihover */
+  filter: grayscale(0%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 
 .kategori img:active {
-  transform: scale(1); /* Mengembalikan skala saat gambar ditekan */
+  transform: scale(1);
 }
 
 .kategori h2 {
@@ -181,7 +181,7 @@ nav .logo {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Menambahkan transisi untuk efek transform */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   gap: 30px;
   margin: 10px;
 }
@@ -356,7 +356,7 @@ main {
 /* Untuk layar dengan lebar maksimum 1200px */
 @media (max-width: 1200px) {
   .blog-content {
-    display: block; /* Menggunakan blok untuk non-fleksibel */
+    display: block;
     flex-flow: column nowrap;
   }
   /* header nav ul {
@@ -433,12 +433,17 @@ main {
     color: initial;
   }
 
+  nav.scrolled {
+    background-color: transparent;
+    color: white;
+  }
+
   main {
     flex-direction: column;
   }
 
   .blog-right {
-    width: 100%; /* Mengisi lebar container untuk blog-right */
+    width: 100%;
   }
 
   .featured {
@@ -448,18 +453,18 @@ main {
     gap: 20px;
   }
   .jumbotron .text-jumbotron {
-    padding: 100px; /* Mengurangi padding untuk teks di jumbotron */
+    padding: 100px;
   }
 
   .kategori img {
-    width: 100%; /* Mengisi lebar container untuk gambar kategori */
+    width: 100%;
   }
 
   .kategori h3 {
-    font-size: 18px; /* Mengembalikan ukuran font pada teks kategori */
-    position: static; /* Menghilangkan posisi absolute pada teks kategori */
-    text-align: center; /* Mengubah tata letak teks kategori menjadi tengah */
-    color: black; /* Mengganti warna teks kategori */
+    font-size: 18px;
+    position: static;
+    text-align: center;
+    color: black;
   }
 
   .featured1 {
@@ -467,8 +472,8 @@ main {
   }
 
   .blog-content {
-    flex-direction: column; /* Mengubah arah tata letak menjadi satu kolom */
-    gap: 15px; /* Mengurangi jarak antar elemen */
+    flex-direction: column;
+    gap: 15px;
     padding: 10px;
     align-items: center;
   }
@@ -476,5 +481,16 @@ main {
   .popular-post {
     width: 300px;
     height: auto;
+  }
+
+  .profil h1 {
+    position: absolute;
+    bottom: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    background-color: #9bb8cd;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
   }
 }
