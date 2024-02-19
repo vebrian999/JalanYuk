@@ -1,4 +1,3 @@
-/* style="width: 70px; height: auto; padding-top: 10px" */
 * {
   box-sizing: border-box;
 }
@@ -23,9 +22,7 @@ nav a {
 
 nav a:hover {
   font-weight: bold;
-  /* font-size: 20px; */
   text-decoration: none;
-  /* background-color: #00a2c6;*/
   color: #eec759;
 }
 
@@ -52,9 +49,14 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  transition: background-color 0.3s ease;
-  /* background-color: #00a2c6; */
-  z-index: 1; /* Tambahkan properti z-index untuk menentukan urutan tumpukan */
+  transition: background-color 0.6s ease;
+  z-index: 1;
+  background-color: transparent;
+}
+
+nav.scrolled {
+  background-color: #9bb8cd; /* Ganti warna latar belakang saat di-scroll */
+  color: black;
 }
 
 nav:hover {
@@ -66,19 +68,24 @@ nav .logo {
   height: 70px;
 }
 
-header {
+/* .jumbotron {
   text-align: center;
-  display: inline;
-}
+  background-image: url("./img/banner.jpg");
+  background-size: cover; 
+  background-position:
+  height: 700px; 
+  color: white; 
+  padding: 20px; 
+} */
 
 .jumbotron {
   text-align: center;
-  background-image: url("./img/banner.jpg");
-  background-size: cover; /* Untuk memastikan gambar background menutupi seluruh area .jumbotron */
-  background-position: center; /* Menengahkan background image */
-  height: 700px; /* Atur ketinggian .jumbotron sesuai kebutuhan Anda */
-  color: white; /* Warna teks di atas background image */
-  padding: 20px; /* Padding untuk memberikan ruang di sekitar konten .jumbotron */
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  color: white;
+  padding: 20px;
+  transition: background-image 0.6s ease;
 }
 
 .text-jumbotron {
@@ -101,7 +108,7 @@ header {
   transform: scale(1); /* Mengembalikan skala saat gambar ditekan */
 }
 
-#kategori h2 {
+.kategori h2 {
   width: 100%;
   display: block;
   text-align: center;
@@ -113,7 +120,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  position: relative; /* Menjadikan .kategori sebagai referensi untuk posisi absolute */
+  position: relative;
 }
 
 .featured h2 {
@@ -129,37 +136,32 @@ header {
 }
 .featured {
   display: flex;
-  flex-wrap: wrap; /* Mengizinkan wrapping ke baris baru jika tidak cukup lebar */
-  justify-content: center; /* Menyebar item di antara kolom */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
 }
 
-/* Gaya untuk setiap featured1 */
 .featured1 {
-  flex-basis: calc(50% - 20px); /* Setengah dari lebar container dengan jarak 20px di antara kolom */
+  flex-basis: calc(50% - 20px);
   background-color: #fff;
   border-radius: 8px;
   padding: 30px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Menambahkan transisi untuk efek transform */
-  width: 100%; /* Atur lebar menjadi 100% */
-  max-width: 400px; /* Batasi lebar maksimum */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
 }
 
 .featured1:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05); /* Memberikan efek scaling saat dihover */
+  transform: scale(1.05);
   color: #9bb8cd;
 }
 
 .featured1 img {
   width: 100%;
   height: auto;
-}
-
-.featured1 .card-content {
-  padding: 20px;
 }
 
 .blog-left {
@@ -200,14 +202,6 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
-/* .card-right {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); ada bedanya dengan yang di atas
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  padding: 20px;
-} */
 
 .card-right h2 {
   width: 100%;
@@ -253,13 +247,6 @@ main {
   position: relative;
 }
 
-/* article .me {
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 35px;
-} */
-
 .profil img {
   width: 100%;
   height: auto;
@@ -285,6 +272,7 @@ main {
   color: white;
   padding: 10px;
   margin: 0px 20px;
+  border-radius: 10px;
 }
 .fa {
   padding: 20px;
@@ -356,42 +344,48 @@ main {
 .mobile-menu-icon .bar {
   width: 30px;
   height: 3px;
-  background-color: #333;
+  background-color: #9bb8cd;
   margin: 6px 0;
   transition: 0.4s;
+  margin: 5px;
+  padding: 2px;
 }
 
 ///////////////////code responsif////////////////////////////////
 
 /* Untuk layar dengan lebar maksimum 1200px */
 @media (max-width: 1200px) {
-  header nav ul {
-    padding-inline: 2rem; /* Mengurangi padding untuk menu */
+  .blog-content {
+    display: block; /* Menggunakan blok untuk non-fleksibel */
+    flex-flow: column nowrap;
+  }
+  /* header nav ul {
+    padding-inline: 2rem;
   }
 
   .jumbotron .text-jumbotron {
-    padding: 150px; /* Mengurangi padding untuk teks di jumbotron */
+    padding: 150px;
   }
 
   .kategori img {
-    width: 140px; /* Mengurangi ukuran gambar kategori */
+    width: 140px;
   }
 
   .kategori h3 {
-    font-size: 14px; /* Mengurangi ukuran font pada teks kategori */
+    font-size: 14px;
   }
 
   .featured1 {
-    flex-basis: calc(50% - 10px); /* Mengurangi jarak antar featured1 */
+    flex-basis: calc(50% - 10px);
   }
 
   .blog-left {
-    flex-direction: row; /* Mengubah tata letak menjadi satu kolom */
+    flex-direction: row;
   }
 
   .blog-content img {
-    width: 150px; /* Mengurangi ukuran gambar pada blog content */
-  }
+    width: 150px;
+  } */
 }
 
 /* Untuk layar dengan lebar maksimum 768px */
@@ -440,7 +434,7 @@ main {
   }
 
   main {
-    flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+    flex-direction: column;
   }
 
   .blog-right {
@@ -448,10 +442,10 @@ main {
   }
 
   .featured {
-    flex-wrap: nowrap; /* Menghindari wrapping item ke baris baru */
-    flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
-    justify-content: center; /* Menyusun item di tengah kolom */
-    gap: 20px; /* Mengurangi jarak antar item */
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
   .jumbotron .text-jumbotron {
     padding: 100px; /* Mengurangi padding untuk teks di jumbotron */
