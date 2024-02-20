@@ -29,7 +29,7 @@ nav a:hover {
 nav ul {
   padding-inline: 4rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   gap: 2rem;
 }
@@ -68,16 +68,6 @@ nav .logo {
   height: 70px;
 }
 
-/* .jumbotron {
-  text-align: center;
-  background-image: url("./img/banner.jpg");
-  background-size: cover; 
-  background-position:
-  height: 700px; 
-  color: white; 
-  padding: 20px; 
-} */
-
 .jumbotron {
   text-align: center;
   background-size: cover;
@@ -113,6 +103,9 @@ nav .logo {
   display: block;
   text-align: center;
   font-size: 35px;
+  background-color: #9bb8cd;
+  margin: 35px 0px;
+  color: white;
 }
 
 .kategori {
@@ -128,6 +121,9 @@ nav .logo {
   display: block;
   text-align: center;
   font-size: 35px;
+  background-color: #9bb8cd;
+  margin: 35px 0px;
+  color: white;
 }
 
 .featured a {
@@ -138,7 +134,7 @@ nav .logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 30px 30px;
 }
 
 .featured1 {
@@ -165,7 +161,7 @@ nav .logo {
 }
 
 .blog-left {
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   gap: 40px;
 }
@@ -185,12 +181,25 @@ nav .logo {
   gap: 30px;
   margin: 10px;
 }
+.blog-content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  color: #9bb8cd;
+}
+
+.blog-content a {
+  text-decoration: none;
+  color: black;
+}
 
 .blog h2 {
   width: 100%;
   display: block;
   text-align: center;
   font-size: 35px;
+  background-color: #9bb8cd;
+  margin: 35px 0px;
+  color: white;
 }
 .card-right {
   display: flex;
@@ -208,7 +217,9 @@ nav .logo {
   display: block;
   text-align: center;
   font-size: 35px;
-  margin: 5px;
+  background-color: #9bb8cd;
+  margin: 35px 0px;
+  color: white;
 }
 
 .popular-post {
@@ -227,6 +238,7 @@ nav .logo {
 
 .popular-post h3 {
   text-align: center;
+  color: black;
 }
 
 main {
@@ -321,6 +333,7 @@ main {
   text-align: center;
   font-size: 35px;
   margin: 10px;
+  color: #9bb8cd;
 }
 
 /* footer */
@@ -359,33 +372,6 @@ main {
     display: block;
     flex-flow: column nowrap;
   }
-  /* header nav ul {
-    padding-inline: 2rem;
-  }
-
-  .jumbotron .text-jumbotron {
-    padding: 150px;
-  }
-
-  .kategori img {
-    width: 140px;
-  }
-
-  .kategori h3 {
-    font-size: 14px;
-  }
-
-  .featured1 {
-    flex-basis: calc(50% - 10px);
-  }
-
-  .blog-left {
-    flex-direction: row;
-  }
-
-  .blog-content img {
-    width: 150px;
-  } */
 }
 
 /* Untuk layar dengan lebar maksimum 768px */
@@ -442,6 +428,10 @@ main {
     flex-direction: column;
   }
 
+  .card-right {
+    align-items: start; /* Mengatur konten ke tengah secara horizontal pada mobile */
+  }
+
   .blog-right {
     width: 100%;
   }
@@ -450,6 +440,7 @@ main {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
   }
   .jumbotron .text-jumbotron {
@@ -479,7 +470,7 @@ main {
   }
 
   .popular-post {
-    width: 300px;
+    width: 280px;
     height: auto;
   }
 
@@ -492,5 +483,10 @@ main {
     padding: 20px;
     border-radius: 10px;
     color: white;
+  }
+
+  .fa {
+    width: 50px;
+    text-align: center;
   }
 }
